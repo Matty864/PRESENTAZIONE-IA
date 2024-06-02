@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentazione sull'Intelligenza Artificiale</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .slide {
+      display: none;
+      text-align: center;
+      padding: 20px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  </style>
+  <script>
+    let currentSlide = 0;
+
+    function showSlide(n) {
+      const slides = document.getElementsByClassName("slide");
+      if (n >= slides.length) { currentSlide = 0; }
+      if (n < 0) { currentSlide = slides.length - 1; }
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[currentSlide].style.display = "block";
+    }
+
+    function nextSlide() {
+      showSlide(++currentSlide);
+    }
+
+    function prevSlide() {
+      showSlide(--currentSlide);
+    }
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'ArrowRight') {
+        nextSlide();
+      } else if (event.key === 'ArrowLeft') {
+        prevSlide();
+      }
+    });
+  </script>
+</head>
+<body onload="showSlide(0)">
+  <div class="slide">
+    <h1>Intelligenza Artificiale</h1>
+    <p>L'Intelligenza Artificiale (IA) è il campo della scienza informatica che si concentra sulla creazione di sistemi in grado di eseguire compiti che richiedono intelligenza umana.</p>
+  </div>
+  <div class="slide">
+    <h2>Applicazioni dell'IA</h2>
+    <p>L'IA viene utilizzata in una vasta gamma di settori, tra cui:</p>
+    <ul>
+      <li>Automazione industriale</li>
+      <li>Medicina e assistenza sanitaria</li>
+      <li>Finanza</li>
+      <li>Trasporti</li>
+      <li>Educazione</li>
+    </ul>
+  </div>
+  <div class="slide">
+    <h2>Uso consapevole dell'IA</h2>
+    <p>È importante utilizzare l'IA in modo consapevole, considerando questioni etiche, sociali e legali, come la privacy, la sicurezza e l'impatto sull'occupazione.</p>
+  </div>
+  <div class="slide">
+    <h2>Esempi di IA</h2>
+    <img src="https://via.placeholder.com/400" alt="Esempi di Intelligenza Artificiale">
+    <p>Esempi di tecnologie di Intelligenza Artificiale includono sistemi di riconoscimento vocale, veicoli autonomi, e assistenti virtuali come Siri e Alexa.</p>
+  </div>
+  <div class="slide">
+    <h2>Machine Learning</h2>
+    <p>Il Machine Learning è una sottocategoria dell'IA che si occupa dello sviluppo di algoritmi e modelli che consentono ai computer di apprendere dai dati e migliorare le prestazioni nel tempo.</p>
+  </div>
+  <div class="slide">
+    <h2>Deep Learning</h2>
+    <p>Il Deep Learning è una tecnica di Machine Learning che utilizza reti neurali artificiali profonde per apprendere da grandi quantità di dati non strutturati.</p>
+  </div>
+  <div class="slide">
+    <h2>Ethical AI</h2>
+    <p>L'Etica nell'IA riguarda la responsabilità, la trasparenza e l'imparzialità nell'uso e nello sviluppo di sistemi di Intelligenza Artificiale.</p>
+  </div>
+  <div class="slide">
+    <h2>Futuro dell'IA</h2>
+    <p>Il futuro dell'IA promette nuove opportunità e sfide, dalle applicazioni mediche avanzate alla trasformazione dei settori dell'industria e dei servizi.</p>
+  </div>
+  <div class="slide">
+    <h2>Intelligenza Artificiale e Lavoro</h2>
+    <p>L'automazione guidata dall'IA potrebbe avere un impatto significativo sul mercato del lavoro, con alcuni lavori che saranno automatizzati e altri che richiederanno nuove competenze.</p>
+  </div>
+  <div class="slide">
+    <h2>Sviluppo Responsabile di IA</h2>
+    <p>Il Sviluppo Responsabile di IA implica la considerazione di fattori etici, sociali, legali e ambientali durante tutto il ciclo di vita dei sistemi di Intelligenza Artificiale.</p>
+  </div>
+  <button onclick="prevSlide()">Precedente</button>
+  <button onclick="nextSlide()">Successivo</button>
+</body>
+</html>
